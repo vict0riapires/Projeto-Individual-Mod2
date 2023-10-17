@@ -22,7 +22,7 @@ def buscandoCandidato():
         if (i >= notaCandidatoIdeal):
             candidatosAptos.append(i)
 
-def candidatosFinal():
+def candidatoFinal():
     candidatoIdeal()
     buscandoCandidato()
     print("\n\nCANDIDATOS\n\n")
@@ -39,13 +39,13 @@ def candidatosFinal():
     if (candidato1 not in candidatosAptos) and (candidato2 not in candidatosAptos) and (candidato3 not in candidatosAptos) and (candidato4 not in candidatosAptos) and (candidato5 not in candidatosAptos):
         print("\nInfelizmente, não há nenhum candidato apto para a vaga.\n")
 
-candidatosFinal()
+candidatoFinal()
 
 loop = input('\nDeseja tentar novamente?\n')
 while loop == 'SIM':
     notaCandidatoIdeal =  []
     candidatosAptos = []
-    candidatosFinal()
+    candidatoFinal()
     loop = input('\nDeseja tentar novamente?\n')
 else:
     print('\nObrigada por utilizar o nosso sistema!')
